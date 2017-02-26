@@ -36,8 +36,8 @@ function setIcon(statCount) {
   if (statCount <= 3) {
     color = "green";
   }
-  
-  const path = `logo-${color}-16x16.png`;
+
+  const path = `assets/logo-${color}-16x16.png`;
   chrome.browserAction.setIcon({
     path: {
       "16": path
