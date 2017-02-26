@@ -2,4 +2,4 @@
 
 A Chrome Extension to get Crime Statistics for Properties on Realestate.com.au
 
-![propertycop](logo-red.png)
+![propertycop](logo-big.png)

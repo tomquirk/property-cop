@@ -2,9 +2,15 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   font-weight: 300;
   font-size: 14px;
+  margin: 1.5rem;
+  min-width: 300px;
 }
 
-body>main {
-  width: 350px;
-  height: 400px;
+#title {
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 0.8rem
+}
+
+.stat {
+  font-size: 1.3rem
 }

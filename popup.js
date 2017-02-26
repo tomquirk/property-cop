@@ -1,9 +1,4 @@
 const GOOGLE_API_KEY = "AIzaSyCxnnuZP82AlrtMlHyM0d8oNqBIxeF08pw";
-const statCount = {
-  good: 5,
-  warn: 12,
-  bad: 20
-};
 
 const statQuery = {
   property(coords) {
@@ -35,14 +30,14 @@ function getCrimeStats(payload) {
 
 function setIcon(statCount) {
   let color = "red";
-  if (statCount >= statCount.good) {
-    icon = "green";
+  if (statCount <= 6) {
+    color = "orange";
   }
-  else if (statCount >= statCount.warn) {
-    icon = "yellow";
+  if (statCount <= 3) {
+    color = "green";
   }
-
-  const path = "logo-yellow-16.png";
+  
+  const path = `logo-${color}-16x16.png`;
   chrome.browserAction.setIcon({
     path: {
       "16": path
@@ -81,8 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
           }, 0);
 
           renderContent({ id: "title", text: address });
-          renderContent({ id: "statsProperty", text: `${statsPropertyCount} crime${statsPropertyCount > 1 ? "s" : ""} occured at this property` });
-          renderContent({ id: "statsArea", text: `${statsAreaCount} crimes found with 100m` });
+          renderContent({ id: "statsProperty", text: `${statsPropertyCount} crime${statsPropertyCount === 1 ? "" : "s"} reported at this property` });
+          renderContent({ id: "statsArea", text: `${statsAreaCount} crimes found within 100m` });
           setIcon(statsPropertyCount);
         });
     }

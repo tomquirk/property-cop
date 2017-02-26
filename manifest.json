@@ -6,7 +6,7 @@
   "version": "1.0",
 
   "browser_action": {
-    "default_icon": "logo-red.png",
+    "default_icon": "logo-black-16x16.png",
     "default_popup": "popup.html"
   },
   "permissions": [
