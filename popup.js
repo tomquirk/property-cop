@@ -37,7 +37,7 @@ function setIcon(statCount) {
     color = "green";
   }
 
-  const path = `assets/logo-${color}-16x16.png`;
+  const path = `assets/icon-${color}-16x16.png`;
   chrome.browserAction.setIcon({
     path: {
       "16": path
@@ -57,7 +57,8 @@ function getAddressCoords(address) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+function runall() {
+  console.log("RUNNING");
   getCurrentTab(tab => {
     const location = tab.url.slice(0, 28);
     if (location == "http://www.realestate.com.au") {
@@ -86,4 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
       renderContent({ id: "stat", text: "" });
     }
   });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  runall();
 });

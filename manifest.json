@@ -1,12 +1,10 @@
 {
   "manifest_version": 2,
-
   "name": "Property Cop",
   "description": "See the crime stats for properties on Realestate.com.au",
   "version": "1.0",
-
   "browser_action": {
-    "default_icon": "logo-black-16x16.png",
+    "default_icon": "/assets/icon-black-16x16.png",
     "default_popup": "popup.html"
   },
   "permissions": [
